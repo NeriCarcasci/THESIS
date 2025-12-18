@@ -1,0 +1,19 @@
+# Core data handling
+numpy>=1.26
+pandas>=2.1
+pyarrow>=15.0
+polars>=0.20
+
+# Progress + plotting
+tqdm>=4.66
+matplotlib>=3.8
+
+# Splitting / preprocessing utilities
+scikit-learn>=1.4
+
+# (Optional) Graph utilities for debugging
+networkx>=3.2
+
+
+# torch>=2.1
+# torch-geometric

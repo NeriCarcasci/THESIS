@@ -1,5 +1,15 @@
-DATA/background_edges.csv
-DATA/background_nodes.csv
-DATA/edges.csv
-DATA/connected_components.csv
-DATA/nodes.csv
+# Data
+data/
+DATA/
+processed/
+*.parquet
+*.npy
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.venv/
+.env
