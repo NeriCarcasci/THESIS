@@ -1,0 +1,20 @@
+{
+  "model": "logreg_pooled_mean_max_std",
+  "val_roc_auc": 0.8752484950300995,
+  "val_pr_auc": 0.14831144022596388,
+  "val_best_f1": 0.24797843665721475,
+  "val_best_threshold": 0.873888549492819,
+  "test_roc_auc": 0.8894594162084224,
+  "test_pr_auc": 0.15404273949104286,
+  "test_f1_at_val_threshold": 0.25111536010197577,
+  "test_confusion_matrix": [
+    [
+      22990,
+      819
+    ],
+    [
+      356,
+      197
+    ]
+  ]
+}
