@@ -1,7 +1,7 @@
 {
   "rng_seed": 7,
-  "project_root": "d:\\THESIS",
-  "data_dir": "d:\\THESIS\\DATA",
-  "processed_dir": "d:\\THESIS\\DATA\\processed",
+  "project_root": "D:\\THESIS",
+  "data_dir": "D:\\THESIS\\DATA",
+  "processed_dir": "D:\\THESIS\\DATA\\processed",
   "notes": "Workbook 02: baselines + visualisation"
 }

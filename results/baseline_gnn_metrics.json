@@ -1,0 +1,18 @@
+{
+  "model": "graphsage_meanpool",
+  "val_pr_auc_best": 0.44316678804929555,
+  "test_roc_auc": 0.9136987342835466,
+  "test_pr_auc": 0.40115606033173257,
+  "test_f1_at_val_threshold": 0.41373671300081766,
+  "val_best_threshold": 0.902656614780426,
+  "test_confusion_matrix": [
+    [
+      23392,
+      417
+    ],
+    [
+      300,
+      253
+    ]
+  ]
+}

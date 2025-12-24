@@ -92,8 +92,65 @@ The workflow operates on the **labelled subgraph universe** (nodes/edges induced
 - `processed/artifacts/packed/edges_by_ccid.npz` : intra-component edges grouped by component
 - `results/baseline_tabular_metrics.json` : pooled-feature baseline metrics
 - `results/baseline_gnn_metrics.json` : GraphSAGE baseline metrics
-- Optional prediction tables (if enabled in notebook)
 
+
+#### Baseline results (Wb02)
+
+
+**Test prevalence (ground truth):** 553 suspicious out of 24,362 subgraphs → **2.27%** suspicious.  
+This is a rare-event regime, so **PR-AUC + precision/recall** are the most informative metrics.
+
+---
+
+##### 1) Headline metrics (threshold selected on validation to maximise F1)
+
+| Model | Test ROC-AUC | Test PR-AUC | Test F1 | Val best threshold |
+|---|---:|---:|---:|---:|
+| LogReg (pooled mean/max/std) | 0.890 | 0.154 | 0.251 | 0.865 |
+| GraphSAGE (2-layer + mean pool) | **0.914** | **0.401** | **0.414** | 0.903 |
+
+**Interpretation:** GraphSAGE improves **rare-class ranking** substantially (PR-AUC 0.154 → 0.401).
+
+
+
+##### 2) Confusion matrix (test)
+
+| Model | TN | FP | FN | TP |
+|---|---:|---:|---:|---:|
+| LogReg (pooled) | 22,920 | 889 | 346 | 207 |
+| GraphSAGE | **23,392** | **417** | 300 | **253** |
+
+
+
+##### 3) Operational rates (test)
+
+| Model | Precision | Recall | False Positive Rate (FPR) | Alert rate (Predicted Positive %) |
+|---|---:|---:|---:|---:|
+| LogReg (pooled) | 18.9% | 37.4% | 3.73% | 4.50% |
+| GraphSAGE | **37.8%** | **45.8%** | **1.75%** | **2.75%** |
+
+
+  - **Precision**: “Of the alerts raised, what % are truly suspicious?”
+  - **Recall**: “Of all suspicious cases, what % did we catch?”
+  - **Alert rate**: “What % of all cases get flagged for review?”
+
+
+
+##### 4) Improvement summary (GraphSAGE vs LogReg)
+
+| Quantity | Change |
+|---|---:|
+| PR-AUC | **2.6× higher** (0.154 → 0.401) |
+| F1 | **1.65× higher** (0.251 → 0.414) |
+| Precision | **~2.0× higher** (18.9% → 37.8%) |
+| Recall | **+8.4 pp** (37.4% → 45.8%) |
+| False positives | **−53%** (889 → 417) |
+| True positives | **+22%** (207 → 253) |
+| Alert rate | **−39%** (4.50% → 2.75%) |
+
+ Using graph structure (GraphSAGE message passing) produces a materially better AML screening model: higher hit-rate (precision), higher capture (recall), and far fewer false alarms.
+
+---
 
 
 ## Environment setup (conda)
