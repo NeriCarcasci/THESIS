@@ -1,5 +1,20 @@
-# Towards Trustworthy AI in Financial Compliance
-X00195265 Thesis Project
+<div align="center">
+
+# Towards Trustworthy AI in Financial Compliance  
+X00195265 | Thesis Project
+
+<!-- Badges (edit links/placeholders as needed) -->
+![status](https://img.shields.io/badge/status-research-blue)
+![python](https://img.shields.io/badge/python-3.11-informational)
+![topic](https://img.shields.io/badge/topic-AML%20%7C%20GNN%20%7C%20XAI-brightgreen)
+![dataset](https://img.shields.io/badge/dataset-Elliptic2-orange)
+![framework](https://img.shields.io/badge/PyTorch%20Geometric-used-9cf)
+
+</div>
+
+---
+
+
 
 ## Abstract
 Money laundering poses a major threat to global financial stability. Each year, up to 5% of global GDP, or €1.7 trillion, is laundered (UNODC, 2024), so financial institutions have to allocate vast resources to counter these illicit activities. In the EMEA region alone, compliance costs reached US$85 billion in 2023 (LexisNexis Risk Solutions, 2024). Despite these investments, Anti-Money Laundering (AML) systems continue to face challenges, including high false-positive rates and limited interpretability. 
@@ -8,6 +23,26 @@ This research proposes the design, implementation, and evaluation of an explaina
 To support this goal, the study will include a preliminary bias analysis to examine whether the generated explanations differ across transaction types or network structures, helping to identify potential limitations in the transparency and fairness of the model’s reasoning.
 In addition, a comparative evaluation against a traditional baseline model will be conducted to understand how graph-based representations affect both predictive accuracy and the interpretability of explanations. These supporting analyses will help contextualise the explainability results and clarify their practical relevance for financial compliance systems.
 
+
+## Contents
+- [Abstract](#abstract)
+- [Scope and research objectives](#scope-and-research-objectives)
+- [Dataset characteristics (Elliptic2)](#dataset-characteristics-elliptic2)
+- [Repository layout](#repository-layout)
+- [Workbooks overview](#workbooks-overview)
+  - [01: Preprocessing and artifact generation](#01-preprocessing-and-artifact-generation)
+  - [02: Baselines, dataset objects, and graph visualisation](#02-baselines-dataset-objects-and-graph-visualisation)
+- [Environment setup (conda)](#environment-setup-conda)
+- [How to run](#how-to-run)
+
+
+```mermaid
+flowchart LR
+  A[DATA/*.csv] --> B[Workbook 01: preprocessing]
+  B --> C[processed/ arrays + artifacts]
+  C --> D[Workbook 02: baselines + dataset]
+  D --> E[results/ metrics + predictions]
+```
 
 ## Scope and research objectives
 This repository is structured around four research threads:
