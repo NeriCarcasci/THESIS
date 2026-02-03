@@ -8,7 +8,7 @@ X00195265 | Thesis Project
 ![python](https://img.shields.io/badge/python-3.11-informational)
 ![topic](https://img.shields.io/badge/topic-AML%20%7C%20GNN%20%7C%20XAI-brightgreen)
 ![dataset](https://img.shields.io/badge/dataset-Elliptic2-orange)
-![framework](https://img.shields.io/badge/PyTorch%20Geometric-used-9cf)
+
 
 </div>
 
