@@ -1,0 +1,14 @@
+{
+  "nodes": {
+    "path": "DATA\\nodes.csv",
+    "partial_sha256_first5MB": "1fc3f79a211e2544f21490f4b4d9a616314f7f64c3e3478189fc678589e12063"
+  },
+  "edges": {
+    "path": "DATA\\edges.csv",
+    "partial_sha256_first5MB": "c026e367ae38ab6a46806d877c9a98310f0fc28a5bb9e1bef1c050d93d55ca10"
+  },
+  "cc": {
+    "path": "DATA\\connected_components.csv",
+    "partial_sha256_first5MB": "79511c49f76110d0feae7feda7e85279bc442efe31f5e7a9f53b2caf0019062b"
+  }
+}

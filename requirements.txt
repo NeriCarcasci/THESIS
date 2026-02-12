@@ -7,12 +7,16 @@ polars>=0.20
 # Progress + plotting
 tqdm>=4.66
 matplotlib>=3.8
+seaborn>=0.12
 
 # Splitting / preprocessing utilities
 scikit-learn>=1.4
 
 # (Optional) Graph utilities for debugging
 networkx>=3.2
+
+# Jupyter / notebook kernel (useful when running notebooks)
+ipykernel>=6.0
 
 
 # torch>=2.1
