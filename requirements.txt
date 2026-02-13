@@ -1,23 +1,59 @@
-# Core data handling
-numpy>=1.26
+# ============================================================
+#  Elliptic2 GNN Thesis – requirements.txt
+# ============================================================
+#  Install order:
+#    1. Install PyTorch (with CUDA) first – see instructions below
+#    2. pip install -r requirements.txt
+#
+#  PyTorch + CUDA  (install BEFORE this file)
+#  ─────────────────────────────────────────
+#  Pick the command that matches your CUDA version from:
+#    https://pytorch.org/get-started/locally/
+#
+#  Example for CUDA 12.8:
+#    pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cu128
+#
+#  Example for CUDA 12.4:
+#    pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cu124
+#
+#  CPU-only (not recommended for training):
+#    pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+#
+#  PyTorch Geometric (install AFTER torch)
+#  ────────────────────────────────────────
+#  pip install torch-geometric
+#  Optional compiled extensions (faster, but wheels must match torch+CUDA):
+#    pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv \
+#      -f https://data.pyg.org/whl/torch-2.9.1+cu128.html
+#  (Replace cu128 with your CUDA tag, e.g. cu124, or cpu)
+# ============================================================
+
+# ── Core data ──────────────────────────────────────────────
+numpy>=1.26,<3.0
 pandas>=2.1
 pyarrow>=15.0
 polars>=0.20
 
-# Progress + plotting
+# ── ML / stats ─────────────────────────────────────────────
+scikit-learn>=1.4
+
+# ── Hyperparameter optimisation ────────────────────────────
+optuna>=3.5
+
+# ── Progress bars ──────────────────────────────────────────
 tqdm>=4.66
+
+# ── Plotting ───────────────────────────────────────────────
 matplotlib>=3.8
 seaborn>=0.12
 
-# Splitting / preprocessing utilities
-scikit-learn>=1.4
-
-# (Optional) Graph utilities for debugging
+# ── Graph utilities (optional, used in wb02/wb02.5) ───────
 networkx>=3.2
 
-# Jupyter / notebook kernel (useful when running notebooks)
+# ── Jupyter / notebook kernel ─────────────────────────────
 ipykernel>=6.0
+ipywidgets>=8.0
 
-
-# torch>=2.1
-# torch-geometric
+# ── PyTorch Geometric (listed here so pip knows about it;
+#    install separately per the instructions above) ────────
+torch-geometric>=2.5
