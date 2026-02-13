@@ -40,6 +40,9 @@ scikit-learn>=1.4
 # ── Hyperparameter optimisation ────────────────────────────
 optuna>=3.5
 
+# ── Experiment tracking (remote dashboard) ─────────────────
+wandb>=0.16
+
 # ── Progress bars ──────────────────────────────────────────
 tqdm>=4.66
 

@@ -1,0 +1,87 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            o7bieyszyupjt3odhtptukbrhagqy6xg:
+                codePath: d:\THESIS\wb03_model_development.ipynb
+                codePathLocal: wb03_model_development.ipynb
+                cpu_count: 14
+                cpu_count_logical: 20
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "874357190656"
+                        used: "232256180224"
+                email: nericarcasci@gmail.com
+                executable: c:\Users\neric\anaconda3\envs\tud-thesis\python.exe
+                git:
+                    commit: c5e665e7332e7ab17a34374453235f8cb2bca718
+                    remote: https://github.com/NeriCarcasci/THESIS.git
+                gpu: NVIDIA GeForce RTX 4070 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 4608
+                      memoryTotal: "8585740288"
+                      name: NVIDIA GeForce RTX 4070 Laptop GPU
+                      uuid: GPU-9f4900b6-caf1-26e5-3244-3752327df0ef
+                host: neri-s7
+                memory:
+                    total: "34070388736"
+                os: Windows-10-10.0.26200-SP0
+                program: d:\THESIS\wb03_model_development.ipynb
+                python: CPython 3.11.14
+                root: d:\THESIS
+                startedAt: "2026-02-13T01:44:48.256898Z"
+                writerId: o7bieyszyupjt3odhtptukbrhagqy6xg
+        m: []
+        python_version: 3.11.14
+        t:
+            "1":
+                - 1
+                - 5
+                - 35
+                - 53
+                - 77
+            "2":
+                - 1
+                - 5
+                - 35
+                - 53
+                - 77
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.11.14
+            "5": 0.25.0
+            "8":
+                - 1
+                - 3
+            "10":
+                - 19
+                - 20
+            "12": 0.25.0
+            "13": windows-amd64
+arch:
+    value: sage
+batch_size:
+    value: 256
+dropout:
+    value: 0.25
+heads:
+    value: 2
+hidden_dim:
+    value: 128
+lr:
+    value: 0.0007102130307325005
+max_epochs:
+    value: 80
+num_layers:
+    value: 3
+patience:
+    value: 15
+pool:
+    value: max
+seed:
+    value: 7
