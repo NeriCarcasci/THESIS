@@ -1,0 +1,7 @@
+Model,Source,Features,Background graph,PR-AUC,ROC-AUC
+GNN-Seg,Bellei et al.,No,No,0.026,0.537
+Sub2Vec,Bellei et al.,No,No,0.022,0.496
+GLASS,Bellei et al.,No,Yes,0.208,0.889
+GraphSAGE (tuned),This work,Yes (43),No,0.484792650808666,0.9234238089946839
+GCN (tuned),This work,Yes (43),No,0.4199080576417323,0.9170058703316789
+GATv2 (tuned),This work,Yes (43),No,0.4964250757835543,0.928434336947818
