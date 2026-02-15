@@ -296,3 +296,43 @@ These do not block experiment execution but should be verified:
 2. **Edge feature scale:** Are the 95 edge features also binned integers like the node features, or are they continuous? This affects whether you need normalisation in the edge MLP. *Check during Wb03c1 diagnostics.*
 
 3. **Wb03b timing:** GATv2's best trial was #29/30 — the search hadn't converged. Consider running 20 GATv2 trials (not 15) in Wb03b to give Optuna more room, especially with the expanded search space.
+
+
+
+
+
+Phase 1 — Create a fresh venv (so you can always nuke it)
+
+From the instance terminal:
+
+cd /workspace
+python -m venv venv
+source venv/bin/activate
+python -m pip install -U pip setuptools wheel
+Phase 2 — Install the known-good Blackwell-ready PyTorch
+
+Install PyTorch 2.7.0 cu128 from the official PyTorch cu128 index:
+
+pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu128
+
+Verify:
+
+python -c "import torch; print(torch.__version__, torch.version.cuda); print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+
+You want to see:
+
+torch 2.7.0
+
+cuda 12.8
+
+GPU is the 5090
+
+no sm_120 warning (PyTorch 2.7 is where Blackwell support lands).
+
+Phase 3 — Install PyG using wheels only (no compiling)
+
+This is critical.
+
+pip install pyg-lib torch-scatter torch-sparse torch-cluster torch-spline-conv \
+  -f https://data.pyg.org/whl/torch-2.7.0+cu128.html
+pip install torch-geometric==2.7.0
