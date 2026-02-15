@@ -1,0 +1,32 @@
+{
+  "n_edges": 367137,
+  "n_features": 95,
+  "n_matched_forward": 367137,
+  "n_matched_reverse": 0,
+  "n_unmatched_final": 0,
+  "multigraph": {
+    "n_directed_edges": 367137,
+    "n_unique_pairs": 343192,
+    "n_duplicate_edges": 23945,
+    "duplicate_pct": 6.52,
+    "note": "pair-level aggregation; duplicate edges share same feature vector"
+  },
+  "dense_subset": {
+    "zero_threshold": 0.5,
+    "n_features_dense": 52,
+    "n_features_dropped": 43
+  },
+  "feature_stats": {
+    "unique_values_per_feat": {
+      "min": 3,
+      "median": 576.0,
+      "max": 36516
+    },
+    "zero_rate_mean": 0.4401645563831542,
+    "value_range": [
+      -1.0,
+      98.0
+    ],
+    "likely_binned": false
+  }
+}

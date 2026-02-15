@@ -6,6 +6,8 @@ DATA/background_nodes.csv
 DATA/connected_components.csv
 DATA/visualizations
 
+DATA/processed/arrays/edge_features.npy
+
 
 # Notebooks checkpoints
 .ipynb_checkpoints/
