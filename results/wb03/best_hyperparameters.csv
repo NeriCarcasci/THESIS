@@ -1,0 +1,4 @@
+Architecture,hidden_dim,num_layers,dropout,lr,pool,heads,val_PR-AUC,test_PR-AUC
+SAGE,128,3,0.10,0.00157,max, ,0.5328,0.4848
+GCN,256,2,0.15,0.00165,max, ,0.4757,0.4199
+GATv2,256,2,0.20,0.00075,max,1,0.5425,0.4964

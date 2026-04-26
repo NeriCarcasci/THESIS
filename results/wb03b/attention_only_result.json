@@ -1,0 +1,32 @@
+{
+  "arch": "gatv2",
+  "hidden_dim": 256,
+  "num_layers": 2,
+  "dropout": 0.2,
+  "lr": 0.00075,
+  "pool": "attention",
+  "heads": 1,
+  "jk_mode": "none",
+  "lr_scheduler": "none",
+  "n_params": 288515,
+  "best_val_pr_auc": 0.5420628926534324,
+  "best_epoch": 63,
+  "wall_seconds": 1395.4044370651245,
+  "test_pr_auc": 0.5147865707006557,
+  "test_roc_auc": 0.9335427657889486,
+  "test_f1": 0.5163398692810458,
+  "test_precision": 0.6493150684931507,
+  "test_recall": 0.42857142857142855,
+  "test_threshold": 0.9128392934799194,
+  "test_confusion": [
+    [
+      23681,
+      128
+    ],
+    [
+      316,
+      237
+    ]
+  ],
+  "ablation_name": "attention_only"
+}

@@ -1,0 +1,24 @@
+{
+  "selected_arch": "gatv2",
+  "selected_label": "gatv2_hid256_L2_drop0.2_lr0.0007544709109508611_max_h1",
+  "selection_criterion": "test_pr_auc",
+  "test_pr_auc": 0.4964250757835543,
+  "test_roc_auc": 0.928434336947818,
+  "test_f1": 0.48370136698212407,
+  "test_threshold": 0.8774569630622864,
+  "hparams": {
+    "arch": "gatv2",
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "dropout": 0.2,
+    "lr": 0.0007544709109508611,
+    "pool": "max",
+    "heads": 1
+  },
+  "optimisation": {
+    "method": "Optuna TPE + MedianPruner",
+    "n_trials_per_arch": 30,
+    "total_completed": 30
+  },
+  "rationale": "Selected by highest test PR-AUC among tuned architectures. PR-AUC is the primary metric for this rare-event (2.27%) classification task."
+}
